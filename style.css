@@ -13,3 +13,8 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+.skill-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
