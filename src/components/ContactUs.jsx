@@ -19,21 +19,21 @@ const ContactUs = () => {
                 <div id="form-container" class="right-container md:w-1/2">
                     <form action="" class="flex flex-col" onSubmit={handleSubmit}>
                         <div>
-                            <span className=' text-white'><i class="fa-regular fa-user"></i></span>
+                            <span className=' dark:text-white '><i class="fa-regular fa-user"></i></span>
                             <input class="bg-transparent outline-none py-4 dark:caret-white px-4 dark:text-white text-black" type="text"
                                 name="name" placeholder="Name" id="" />
                         </div>
 
                         <hr />
                         <div>
-                            <span className=' text-white'><i class="fa-solid fa-envelope"></i></span>
+                            <span className=' dark:text-white'><i class="fa-solid fa-envelope"></i></span>
                             <input class="bg-transparent outline-none py-4 dark:caret-white px-4 dark:text-white text-black" type="email"
                                 name="email" placeholder="Email" id="" />
                         </div>
 
                         <hr />
                         <div className='w-[100%] flex'>
-                            <span className='pt-[18px] text-white'><i class="fa-solid fa-message"></i></span>
+                            <span className='pt-[18px] dark:text-white'><i class="fa-solid fa-message"></i></span>
                             <textarea class="bg-transparent outline-none py-4 dark:caret-white px-4 dark:text-white text-black"
                                 placeholder="Message" name="" id="" cols="60" rows="5"></textarea>
                         </div>

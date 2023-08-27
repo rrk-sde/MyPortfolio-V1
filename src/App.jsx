@@ -7,25 +7,19 @@ import Skills from './components/Skills'
 
 function App() {
 
+  const HorizontalLine = <div className="py-20 md:px-36 px-9 text-black dark:bg-[#131013]">
+    <hr className="dark:text-white dark:border-white border-black text-black" />
+  </div>
+
 
   return (
     <>
       <Home />
-      <div className="py-20 md:px-36 px-9 dark:bg-[#131013]">
-        <hr className="dark:text-white" />
-      </div>
+      {HorizontalLine}
       <Skills />
-      <div className="py-20 md:px-36 px-9 dark:bg-[#131013]">
-        <hr className="dark:text-white" />
-      </div>
+      {HorizontalLine}
       <Projects />
-      <div className="py-20 md:px-36 px-9 dark:bg-[#131013]">
-        <hr className="dark:text-white" />
-      </div>
       <ContactUs />
-      <div className="py-6 md:px-36 px-9 dark:bg-[#242424]">
-        <hr className="dark:text-white" />
-      </div>
       <Footer />
     </>
   )

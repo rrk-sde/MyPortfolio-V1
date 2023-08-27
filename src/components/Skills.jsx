@@ -62,9 +62,9 @@ const Skills = () => {
         <section className="skills dark:bg-[#131013] md:px-36  dark:text-white">
             <div className="skills-container relative grid sm:grid-cols-3 lg:grid-cols-5 grid-cols-2 gap-y-8 md:text-left text-center">
                 {
-                    skills.map((skill) => {
+                    skills.map((skill, i) => {
                         return (
-                            <div className="item-11 flex flex-col gap-y-2">
+                            <div key={i} className="item-11 flex flex-col gap-y-2">
                                 <div className="text-2xl font-bold">{skill.title}</div>
                                 <p>{skill.desc}</p>
                             </div>

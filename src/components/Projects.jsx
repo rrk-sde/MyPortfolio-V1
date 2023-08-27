@@ -64,7 +64,7 @@ const Projects = () => {
             <div aria-label="Project Container" className="grid grid-cols-1 md:grid-cols-2 py-12 gap-y-16 gap-x-16 dark:text-white uppercase">
                 {projects.map(project => (
                     <div key={project.id} className={`project-${project.id} flex flex-col space-y-4`}>
-                        <img src={project.image} alt={project.title} />
+                        <img className='hover:border-emerald-400 hover:border-2' src={project.image} alt={project.title} />
                         <div className="text-xl font-semibold">{project.title}</div>
                         <div className="">{project.category}</div>
                         <div className="flex gap-x-8">

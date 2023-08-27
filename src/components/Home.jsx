@@ -36,23 +36,22 @@ const Home = () => {
                     <h1>{data.name}</h1>
                 </div>
 
-                <div className="z-30 md:text-white">
-                    <ul className="flex gap-x-4 text-center md:text-black dark:md:text-white">
+                <div className="z-30 md:text-white md:mr-40">
+                    <ul className="flex gap-x-4 text-center   md:dark:text-white">
                         {data?.sociel.map((item, i) => (
-                            <li key={i}>
+                            <li key={i} className='cursor-pointer'>
                                 <a href={item} target="_blank" rel="noopener noreferrer">
                                     <i className={data.icon[i]}></i>
                                 </a>
                             </li>
                         ))}
                     </ul>
-
                 </div>
 
                 <img className="md:absolute dark:bg-[#242424] bg-gray-600 relative md:max-w-lg z-10 md:right-48 top-0  md:rounded-b-3xl  "
                     src={image} alt="" srcSet="" />
 
-            </header>
+            </header >
             <main className="md:px-36 px-9 md:text-start text-center dark:text-white flex flex-col gap-y-12 my-auto z-30">
                 <div className="md:text-5xl text-xl font-bold flex flex-col md:gap-y-4 gap-y-1">
                     <div className="md:block hidden">
