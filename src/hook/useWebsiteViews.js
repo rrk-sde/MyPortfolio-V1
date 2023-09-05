@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const useWebsiteViews = (websiteName) => {
     const [views, setViews] = useState(0);
-    const apiUrl = 'http://localhost:8000'
+    const apiUrl = 'https://contactviews.onrender.com'
 
 
     useEffect(() => {

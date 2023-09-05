@@ -4,7 +4,7 @@ import SuccessMessage from './SuccessMessage'
 
 const ContactUs = () => {
 
-    const apiUrl = 'http://localhost:8000/api/contacts'
+    const apiUrl = 'https://contactviews.onrender.com/api/contacts'
     const websiteName = "portfolio-v1"
     const [loading, setLoading] = useState(false)
     const [messageSent, setMessageSent] = useState(false);
