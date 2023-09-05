@@ -1,13 +1,21 @@
 import React, { useEffect, useRef } from 'react'
 import ringart from '../assets/ring-art.png'
 import image from "../assets/3_IMG_1180.jpg"
+import useWebsiteViews from '../hook/useWebsiteViews'
+import { GrView } from 'react-icons/gr'
 
 const Home = () => {
+    // const params = useParams();
+    // console.log(params);
 
+    // const websiteName = window.location.href;
+    const websiteName = "portfolio-v1"
+    const views = useWebsiteViews(websiteName);
+    // console.log(views)
     const data = {
         name: "Rajeev Ranjan Kumar",
-        sociel: ["https://www.linkedin.com/in/rrk-sde/", "https://www.facebook.com/", "https://www.instagram.com/", "https://www.twitter.com/"],
-        icon: ["fa-brands fa-linkedin fa-beat", "fa-brands fa-square-facebook fa-beat", "fa-brands fa-square-instagram fa-beat", "fa-brands fa-twitter fa-beat"],
+        sociel: ["https://www.linkedin.com/in/rrk-sde/", "https://github.com/rrk-sde", "https://www.instagram.com/", "https://www.twitter.com/"],
+        icon: ["fa-brands fa-linkedin fa-beat", "fa-brands fa-square-github fa-beat", "fa-brands fa-square-instagram fa-beat", "fa-brands fa-twitter fa-beat"],
         whatsapp: "https://api.whatsapp.com/send?phone=+918210787001&text=Hi%20Rajeev%2C%20I%20saw%20your%20Work%2C%20and%20It's%20impressive."
     }
 
@@ -32,20 +40,24 @@ const Home = () => {
             <header
                 className="flex md:flex-row flex-col justify-between md:px-36 px-12 md:items-start items-center py-8 dark:text-white font-semibold text-2xl gap-y-4 ">
 
-                <div className="name-logo z-30">
+                <div className="name-logo z-30 flex items-center gap-12">
                     <h1>{data.name}</h1>
+                    <div className='flex items-center gap-2 dark:bg-white dark:text-black px-4 rounded-sm text-white bg-black'>
+                        <i><GrView /></i> <span>{views} </span>
+                    </div>
                 </div>
 
                 <div className="z-30 md:text-white md:mr-40">
-                    <ul className="flex gap-x-4 text-center   md:dark:text-white">
+                    <ul className="flex gap-x-4 text-center md:dark:text-white">
                         {data?.sociel.map((item, i) => (
-                            <li key={i} className='cursor-pointer'>
+                            <li key={i} className={`cursor-pointer ${i === 2 || i === 3 ? 'opacity-100' : ''}`}>
                                 <a href={item} target="_blank" rel="noopener noreferrer">
                                     <i className={data.icon[i]}></i>
                                 </a>
                             </li>
                         ))}
                     </ul>
+
                 </div>
 
                 <img className="md:absolute dark:bg-[#242424] bg-gray-600 relative md:max-w-lg z-10 md:right-48 top-0  md:rounded-b-3xl  "
@@ -56,7 +68,7 @@ const Home = () => {
                 <div className="md:text-5xl text-xl font-bold flex flex-col md:gap-y-4 gap-y-1">
                     <div className="md:block hidden">
                         <img className="absolute md:-top-72 md:-left-56 opacity-25 -z-10" src={ringart} alt=""
-                            srcset="" />
+                            srcSet="" />
                     </div>
                     <div>
                         Nice To Meet You! <br />
