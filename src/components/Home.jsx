@@ -60,31 +60,31 @@ const Home = ({ toggleTheme, theme }) => {
         };
     }, []);
 
-    console.log(theme, toggleTheme)
-
     return (
         <div className="global-container dark:bg-[#131013] light:bg-white bg-white flex flex-col min-h-screen ">
             <header
-                className="flex md:flex-row flex-col justify-between md:px-36 px-12 md:items-start items-center py-8 dark:text-white font-semibold text-2xl gap-y-4">
+                className="flex md:flex-row flex-col justify-between md:px-36 px-12 md:items-start items-center py-8 dark:text-white font-semibold text-2xl gap-y-4 relative z-40">
 
-                <div className="name-logo z-30 flex items-center gap-12">
+                <div className="name-logo flex md:flex-row flex-col items-center gap-y-4 gap-12">
                     <h1>{data.name}</h1>
-                    <div className='flex items-center gap-2 dark:bg-white dark:text-black px-4 rounded-sm text-white bg-black'>
+                    <div className='flex gap-2 items-center'>
 
-                        {views !== 0 && <i className='dark:text-black px-1 bg-white'><GrView /></i>}
-                        <span>{views === 0 && <ColorRing height={30} width={30} />}{views !== 0 ? views : null}</span>
+
+                        <div className='flex items-center gap-2 dark:bg-white dark:text-black px-4 rounded-sm text-white bg-black'>
+
+                            {views !== 0 && <i className='dark:text-black px-1 bg-white'><GrView /></i>}
+                            <span>{views === 0 && <ColorRing height={30} width={30} />}{views !== 0 ? views : null}</span>
+
+                        </div>
+                        <div className='relative'>
+                            {/* <h1>Dark Mode: Off</h1> */}
+                            <ToggleSwitch onToggle={toggleTheme} theme={theme} />
+                        </div>
                     </div>
                 </div>
 
-                {/* <div className='relative z-40'>
-                    <h1 className='z-30'>{theme} Mode</h1>
-                    <button className='z-30 text-black' onClick={toggleTheme}>Toggle</button>
-                </div> */}
 
-                <div className='relative z-40'>
-                    {/* <h1>Dark Mode: Off</h1> */}
-                    <ToggleSwitch onToggle={toggleTheme} theme={theme} />
-                </div>
+
 
                 <div className="z-30 md:text-white md:mr-40">
                     <ul className="flex gap-x-4 text-center md:dark:text-white">
