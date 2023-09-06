@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 import ContactUs from './components/ContactUs'
 import Footer from './components/Footer'
@@ -11,10 +12,36 @@ function App() {
     <hr className="dark:text-white dark:border-white border-black text-black" />
   </div>
 
+  const [theme, setTheme] = useState(localStorage.theme || 'light');
+
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.theme = newTheme;
+  };
+
+  useEffect(() => {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
+
 
   return (
     <>
-      <Home />
+
+      <Home toggleTheme={toggleTheme} theme={theme} />
       {HorizontalLine}
       <Skills />
       {HorizontalLine}

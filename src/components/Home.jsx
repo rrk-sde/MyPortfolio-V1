@@ -4,8 +4,9 @@ import image from "../assets/3_IMG_1180.jpg"
 import useWebsiteViews from '../hook/useWebsiteViews'
 import { GrView } from 'react-icons/gr'
 import { ColorRing } from 'react-loader-spinner'
+import ToggleSwitch from './ToggleSwitch'
 
-const Home = () => {
+const Home = ({ toggleTheme, theme }) => {
     // const params = useParams();
     // console.log(params);
 
@@ -19,6 +20,30 @@ const Home = () => {
         icon: ["fa-brands fa-linkedin fa-beat", "fa-brands fa-square-github fa-beat", "fa-brands fa-square-instagram fa-beat", "fa-brands fa-twitter fa-beat"],
         whatsapp: "https://api.whatsapp.com/send?phone=+918210787001&text=Hi%20Rajeev%2C%20I%20saw%20your%20Work%2C%20and%20It's%20impressive."
     }
+
+    const projects = [
+        {
+            id: 1,
+            // image: projectimg1,
+            title: "Blogrr",
+            category: "informational website",
+            links: {
+                live: "http://www.blogrr.live/",
+                code: "https://github.com/rrk-sde/blog-app"
+            }
+        },
+        {
+            id: 2,
+            // image: projectimg2,
+            title: "Task",
+            category: "Organizing",
+            links: {
+                live: "https://github.com/rrk-sde/task-tracker-client",
+                code: "https://github.com/rrk-sde/task-tracker-client"
+            }
+        },
+    ];
+
 
     const typewriterRef = useRef(null);
 
@@ -35,19 +60,30 @@ const Home = () => {
         };
     }, []);
 
+    console.log(theme, toggleTheme)
 
     return (
         <div className="global-container dark:bg-[#131013] light:bg-white bg-white flex flex-col min-h-screen ">
             <header
-                className="flex md:flex-row flex-col justify-between md:px-36 px-12 md:items-start items-center py-8 dark:text-white font-semibold text-2xl gap-y-4 ">
+                className="flex md:flex-row flex-col justify-between md:px-36 px-12 md:items-start items-center py-8 dark:text-white font-semibold text-2xl gap-y-4">
 
                 <div className="name-logo z-30 flex items-center gap-12">
                     <h1>{data.name}</h1>
                     <div className='flex items-center gap-2 dark:bg-white dark:text-black px-4 rounded-sm text-white bg-black'>
 
-                        {views !== 0 && <i><GrView /></i>}
+                        {views !== 0 && <i className='dark:text-black px-1 bg-white'><GrView /></i>}
                         <span>{views === 0 && <ColorRing height={30} width={30} />}{views !== 0 ? views : null}</span>
                     </div>
+                </div>
+
+                {/* <div className='relative z-40'>
+                    <h1 className='z-30'>{theme} Mode</h1>
+                    <button className='z-30 text-black' onClick={toggleTheme}>Toggle</button>
+                </div> */}
+
+                <div className='relative z-40'>
+                    {/* <h1>Dark Mode: Off</h1> */}
+                    <ToggleSwitch onToggle={toggleTheme} theme={theme} />
                 </div>
 
                 <div className="z-30 md:text-white md:mr-40">
@@ -63,8 +99,21 @@ const Home = () => {
 
                 </div>
 
-                <img className="md:absolute dark:bg-[#242424] bg-gray-600 relative md:max-w-lg z-10 md:right-48 top-0  md:rounded-b-3xl  "
-                    src={image} alt="" srcSet="" />
+                <div className="md:absolute relative md:max-w-lg z-10 md:right-48 top-0  md:rounded-b-3xl">
+                    <img className=" dark:bg-[#242424] bg-gray-600  " src={image} alt="" srcSet="" />
+                    {/* <div className='absolute top-8 left-4 flex flex-col gap-4'>
+
+                        {projects.map((project) => {
+                            return (
+                                <div key={project.id}>
+                                    <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="bg-gray-400 border-2 font-semibold text-sm flex rounded-full w-16 h-16 justify-center items-center">{project.title}</a>
+                                    <span className="after:contents rotate-45 text-sm text-red-400 -top-2 -right-2 absolute" data-content="New">new</span>
+                                </div>
+                            );
+                        })}
+                    </div> */}
+                </div>
+
 
             </header >
             <main className="md:px-36 px-9 md:text-start text-center dark:text-white flex flex-col gap-y-12 my-auto z-30">

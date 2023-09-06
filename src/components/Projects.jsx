@@ -13,7 +13,7 @@ const Projects = () => {
             title: "Ecom Kisan Haath",
             category: "Ecommerce",
             links: {
-                project: "https://ecom-kisan.netlify.app/",
+                live: "https://ecom-kisan.netlify.app/",
                 code: "https://github.com/rrk-sde"
             }
         },
@@ -23,7 +23,7 @@ const Projects = () => {
             title: "Task Tracker DND",
             category: "Organizing",
             links: {
-                project: "https://task-tracker-cb.netlify.app/tasks",
+                live: "https://task-tracker-cb.netlify.app/tasks",
                 code: "https://github.com/rrk-sde/task-tracker-todo"
             }
         },
@@ -33,7 +33,7 @@ const Projects = () => {
             title: "Darsh Manufactoring Website",
             category: "Showcase",
             links: {
-                project: "https://dasrsh-manufactoring-frontend.vercel.app/",
+                live: "https://dasrsh-manufactoring-frontend.vercel.app/",
                 code: "https://github.com/rrk-sde/dasrsh-manufactoring-frontend"
             }
         },
@@ -43,7 +43,7 @@ const Projects = () => {
             title: "The Rick and Morty API",
             category: "Anime",
             links: {
-                project: "https://rick-morty-characters-seven.vercel.app/characters",
+                live: "https://rick-morty-characters-seven.vercel.app/characters",
                 code: "https://github.com/rrk-sde/rick-morty-characters"
             }
         }
@@ -69,7 +69,7 @@ const Projects = () => {
                         <div className="">{project.category}</div>
                         <div className="flex gap-x-8">
                             <button className="uppercase text-lg underline underline-offset-[10px] decoration-green-400">
-                                <a href={project.links.project} target="_blank" rel="noopener noreferrer">Live URL</a>
+                                <a href={project.links.live} target="_blank" rel="noopener noreferrer">Live URL</a>
                             </button>
                             <button className="uppercase text-lg underline underline-offset-[10px] decoration-green-400">
                                 <a href={project.links.code} target="_blank" rel="noopener noreferrer">view code</a>
