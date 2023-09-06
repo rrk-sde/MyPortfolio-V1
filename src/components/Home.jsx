@@ -62,8 +62,7 @@ const Home = ({ toggleTheme, theme }) => {
 
     return (
         <div className="global-container dark:bg-[#131013] light:bg-white bg-white flex flex-col min-h-screen ">
-            <header
-                className="flex md:flex-row flex-col justify-between md:px-36 px-12 md:items-start items-center py-8 dark:text-white font-semibold text-2xl gap-y-4 relative z-40">
+            <header className="flex md:flex-row flex-col justify-between md:px-36 px-12 md:items-start items-center py-8 dark:text-white font-semibold text-2xl gap-y-4 relative z-40">
 
                 <div className="name-logo flex md:flex-row flex-col items-center gap-y-4 gap-12">
                     <h1>{data.name}</h1>
@@ -99,9 +98,19 @@ const Home = ({ toggleTheme, theme }) => {
 
                 </div>
 
-                <div className="md:absolute relative md:max-w-lg z-10 md:right-48 top-0  md:rounded-b-3xl">
-                    <img className=" dark:bg-[#242424] bg-gray-600  " src={image} alt="" srcSet="" />
-                    {/* <div className='absolute top-8 left-4 flex flex-col gap-4'>
+
+
+
+            </header >
+            <main className="md:px-36 px-9 md:text-start text-center dark:text-white flex flex-col gap-y-12 my-auto z-30">
+                <div className="md:text-5xl text-xl font-bold flex flex-col md:gap-y-4 gap-y-1">
+                    <div className="md:block hidden">
+                        <img className="absolute md:-top-72 md:-left-56 opacity-25 -z-10" src={ringart} alt=""
+                            srcSet="" />
+                    </div>
+                    <div className="md:absolute relative md:max-w-lg -z-10 md:right-48 top-0  md:rounded-b-3xl">
+                        <img className=" dark:bg-[#242424] bg-gray-600  " src={image} alt="" srcSet="" />
+                        {/* <div className='absolute top-8 left-4 flex flex-col gap-4'>
 
                         {projects.map((project) => {
                             return (
@@ -112,15 +121,6 @@ const Home = ({ toggleTheme, theme }) => {
                             );
                         })}
                     </div> */}
-                </div>
-
-
-            </header >
-            <main className="md:px-36 px-9 md:text-start text-center dark:text-white flex flex-col gap-y-12 my-auto z-30">
-                <div className="md:text-5xl text-xl font-bold flex flex-col md:gap-y-4 gap-y-1">
-                    <div className="md:block hidden">
-                        <img className="absolute md:-top-72 md:-left-56 opacity-25 -z-10" src={ringart} alt=""
-                            srcSet="" />
                     </div>
                     <div>
                         Nice To Meet You! <br />
