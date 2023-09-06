@@ -12,8 +12,8 @@ const Footer = () => {
                     <li><a href="https://www.linkedin.com/in/rrk-sde/" target="_blank" rel="noopener noreferrer"><i
                         className="fa-brands fa-linkedin fa-beat"></i></a></li>
 
-                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
-                        className="fa-brands fa-square-facebook fa-beat"></i></a></li>
+                    <li><a href="https://github.com/rrk-sde" target="_blank" rel="noopener noreferrer"><i
+                        className="fa-brands fa-square-github fa-beat"></i></a></li>
 
                     <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
                         className="fa-brands fa-square-instagram fa-beat"></i></a></li>

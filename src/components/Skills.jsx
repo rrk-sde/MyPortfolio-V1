@@ -54,6 +54,10 @@ const Skills = () => {
         {
             title: "Express.js",
             desc: "Web Application Framework"
+        },
+        {
+            title: "AWS",
+            desc: "Cloud Computing"
         }
     ];
 

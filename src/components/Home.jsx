@@ -3,6 +3,7 @@ import ringart from '../assets/ring-art.png'
 import image from "../assets/3_IMG_1180.jpg"
 import useWebsiteViews from '../hook/useWebsiteViews'
 import { GrView } from 'react-icons/gr'
+import { ColorRing } from 'react-loader-spinner'
 
 const Home = () => {
     // const params = useParams();
@@ -43,7 +44,9 @@ const Home = () => {
                 <div className="name-logo z-30 flex items-center gap-12">
                     <h1>{data.name}</h1>
                     <div className='flex items-center gap-2 dark:bg-white dark:text-black px-4 rounded-sm text-white bg-black'>
-                        <i><GrView /></i> <span>{views} </span>
+
+                        {views !== 0 && <i><GrView /></i>}
+                        <span>{views === 0 && <ColorRing height={30} width={30} />}{views !== 0 ? views : null}</span>
                     </div>
                 </div>
 
