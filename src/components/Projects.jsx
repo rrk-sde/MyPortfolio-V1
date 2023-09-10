@@ -98,7 +98,7 @@ const Projects = () => {
             <div className="head-project flex justify-between items-center dark:text-white text-center">
                 <div>
                     <div className="md:text-6xl text-4xl font-bold">Projects</div>
-                    <div className={`fixed top-8 left-16 flex flex-col gap-4 z-40 ${shouldHide ? 'hidden' : ''}`}>
+                    <div className={`fixed top-8 left-8 flex flex-col gap-4 z-40 ${shouldHide ? 'hidden' : ''}`}>
                         {projects2.map((project) => {
                             return (
                                 <div className='relative' key={project.id}>
