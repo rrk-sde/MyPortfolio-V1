@@ -109,7 +109,7 @@ const Home = ({ toggleTheme, theme }) => {
                             srcSet="" />
                     </div>
                     <div className="md:absolute relative md:max-w-lg -z-10 md:right-48 top-0  md:rounded-b-3xl">
-                        <img className=" dark:bg-[#242424] bg-gray-600  " src={image} alt="" srcSet="" />
+                      //  <img className=" dark:bg-[#242424] bg-gray-600  " src={image} alt="" srcSet="" />
                         {/* <div className='absolute top-8 left-4 flex flex-col gap-4'>
 
                         {projects.map((project) => {
