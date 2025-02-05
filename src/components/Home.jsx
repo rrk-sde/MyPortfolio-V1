@@ -5,6 +5,7 @@ import useWebsiteViews from '../hook/useWebsiteViews'
 import { GrView } from 'react-icons/gr'
 import { ColorRing } from 'react-loader-spinner'
 import ToggleSwitch from './ToggleSwitch'
+import businessman from "../assets/vecteezy_businessman.jpg";
 
 const Home = ({ toggleTheme, theme }) => {
     // const params = useParams();
@@ -103,48 +104,39 @@ const Home = ({ toggleTheme, theme }) => {
 
             </header >
             <main className="md:px-36 px-9 md:text-start text-center dark:text-white flex flex-col gap-y-12 my-auto z-30">
-                <div className="md:text-5xl text-xl font-bold flex flex-col md:gap-y-4 gap-y-1">
-                    <div className="md:block hidden">
-                        <img className="absolute md:-top-72 md:-left-56 opacity-25 -z-10" src={ringart} alt=""
-                            srcSet="" />
-                    </div>
-                    <div className="md:absolute relative md:max-w-lg -z-10 md:right-48 top-0  md:rounded-b-3xl">
-  {/*  <img className=" dark:bg-[#242424] bg-gray-600  " src={image} alt="" srcSet="" /> */}
-                        {/* <div className='absolute top-8 left-4 flex flex-col gap-4'>
+    <div className="md:text-5xl text-xl font-bold flex flex-col md:gap-y-4 gap-y-1 relative">
+        <div className="md:block hidden">
+            <img className="absolute md:-top-72 md:-left-56 opacity-25 -z-10" src={ringart} alt="Background Art" />
+        </div>
 
-                        {projects.map((project) => {
-                            return (
-                                <div key={project.id}>
-                                    <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="bg-gray-400 border-2 font-semibold text-sm flex rounded-full w-16 h-16 justify-center items-center">{project.title}</a>
-                                    <span className="after:contents rotate-45 text-sm text-red-400 -top-2 -right-2 absolute" data-content="New">new</span>
-                                </div>
-                            );
-                        })}
-                    </div> */}
-                    </div>
-                    <div>
-                        Nice To Meet You! <br />
-                    </div>
-
-                    <div>
-                        I'm <span ref={typewriterRef} id="auto-input"
-                            className="underline text-yellow-400 underline-offset-[10px] decoration-green-400">
-                        </span>
-                    </div>
-                </div>
-
-
-                <p className="text-xl md:w-1/2">Based in India, I'm a MERN Stack Developer. <br />
-                    I'm passionate about creating full-stack web applications using the MERN stack.
-                </p>
+        <div className="flex md:flex-row flex-col justify-between items-center">
+            <div>
+                <div>Nice To Meet You! <br /></div>
                 <div>
-                    <a className="uppercase text-lg duration-150 hover:underline underline-offset-[6px] decoration-green-400 dark:bg-white bg-blue-200 text-black px-4 py-2 font-bold rounded-md"
-                        href={data.whatsapp}>
-                        Contact
-                        Me <i className="fa-brands fa-square-whatsapp fa-lg text-green-500"></i></a>
+                    I'm <span ref={typewriterRef} id="auto-input"
+                        className="underline text-yellow-400 underline-offset-[10px] decoration-green-400">
+                    </span>
                 </div>
+            </div>
 
-            </main>
+            {/* Image on the right side */}
+            <div className="md:w-1/2 w-full flex justify-center">
+                <img className="w-full max-w-xs md:max-w-md border-2 border-red-500" src={businessman} alt="Businessman" />
+            </div>
+        </div>
+    </div>
+
+    <p className="text-xl md:w-1/2">Based in India, I'm a MERN Stack Developer. <br />
+        I'm passionate about creating full-stack web applications using the MERN stack.
+    </p>
+
+    <div>
+        <a className="uppercase text-lg duration-150 hover:underline underline-offset-[6px] decoration-green-400 dark:bg-white bg-blue-200 text-black px-4 py-2 font-bold rounded-md"
+            href={data.whatsapp}>
+            Contact Me <i className="fa-brands fa-square-whatsapp fa-lg text-green-500"></i>
+        </a>
+    </div>
+</main>
         </div >
     )
 }
