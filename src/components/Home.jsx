@@ -103,40 +103,43 @@ const Home = ({ toggleTheme, theme }) => {
 
 
             </header >
-            <main className="md:px-36 px-9 md:text-start text-center dark:text-white flex flex-col gap-y-12 my-auto z-30">
-    <div className="md:text-5xl text-xl font-bold flex flex-col md:gap-y-4 gap-y-1 relative">
-        <div className="md:block hidden">
-            <img className="absolute md:-top-72 md:-left-56 opacity-25 -z-10" src={ringart} alt="Background Art" />
+            import businessman from "../assets/vecteezy_businessman.jpg";
+
+<main className="md:px-36 px-9 md:text-start text-center dark:text-white flex md:flex-row flex-col items-center justify-between gap-y-12 my-auto z-30">
+    {/* Left side - Text content */}
+    <div className="md:w-1/2 w-full flex flex-col gap-y-6">
+        <div className="md:text-5xl text-xl font-bold relative">
+            <div className="md:block hidden">
+                <img className="absolute md:-top-72 md:-left-56 opacity-25 -z-10" src={ringart} alt="Background Art" />
+            </div>
+
+            <div>Nice To Meet You! <br /></div>
+            <div>
+                I'm <span ref={typewriterRef} id="auto-input"
+                    className="underline text-yellow-400 underline-offset-[10px] decoration-green-400">
+                </span>
+            </div>
         </div>
 
-        <div className="flex md:flex-row flex-col justify-between items-center">
-            <div>
-                <div>Nice To Meet You! <br /></div>
-                <div>
-                    I'm <span ref={typewriterRef} id="auto-input"
-                        className="underline text-yellow-400 underline-offset-[10px] decoration-green-400">
-                    </span>
-                </div>
-            </div>
+        <p className="text-xl">
+            Based in India, I'm a MERN Stack Developer. <br />
+            I'm passionate about creating full-stack web applications using the MERN stack.
+        </p>
 
-            {/* Image on the right side */}
-            <div className="md:w-1/2 w-full flex justify-center">
-                <img className="w-full max-w-xs md:max-w-md border-2 border-red-500" src={businessman} alt="Businessman" />
-            </div>
+        <div>
+            <a className="uppercase text-lg duration-150 hover:underline underline-offset-[6px] decoration-green-400 dark:bg-white bg-blue-200 text-black px-4 py-2 font-bold rounded-md"
+                href={data.whatsapp}>
+                Contact Me <i className="fa-brands fa-square-whatsapp fa-lg text-green-500"></i>
+            </a>
         </div>
     </div>
 
-    <p className="text-xl md:w-1/2">Based in India, I'm a MERN Stack Developer. <br />
-        I'm passionate about creating full-stack web applications using the MERN stack.
-    </p>
-
-    <div>
-        <a className="uppercase text-lg duration-150 hover:underline underline-offset-[6px] decoration-green-400 dark:bg-white bg-blue-200 text-black px-4 py-2 font-bold rounded-md"
-            href={data.whatsapp}>
-            Contact Me <i className="fa-brands fa-square-whatsapp fa-lg text-green-500"></i>
-        </a>
+    {/* Right side - Image */}
+    <div className="md:w-1/2 w-full flex justify-center">
+        <img className="w-full max-w-xs md:max-w-md" src={businessman} alt="Businessman" />
     </div>
 </main>
+
         </div >
     )
 }
