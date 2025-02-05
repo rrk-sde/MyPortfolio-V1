@@ -103,8 +103,6 @@ const Home = ({ toggleTheme, theme }) => {
 
 
             </header >
-            import businessman from "../assets/vecteezy_businessman.jpg";
-
 <main className="md:px-36 px-9 md:text-start text-center dark:text-white flex md:flex-row flex-col items-center justify-between gap-y-12 my-auto z-30">
     {/* Left side - Text content */}
     <div className="md:w-1/2 w-full flex flex-col gap-y-6">
